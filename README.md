@@ -51,6 +51,10 @@ This template provides a production-oriented foundation, allowing you to focus o
 
 The template follows a layered architecture that separates API logic, service orchestration, ML components and model artifacts.
 
+The architecture separates infrastructure from business logic.
+
+Each layer has a single responsibility, making the template easer to maintain, test and extend.
+
 ```mermaid
 flowchart TD
     Client[Client / API Consumer] --> API[FastAPI API Layer]
@@ -66,6 +70,14 @@ flowchart TD
 ---
 
 ## Project Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| src/api | FastAPI application and request handing |
+| src/services | Business logic |
+| src/ml | ML pipeline |
+| src/core | Configuration and infrastructure |
+| tests | Automated tests |
 
 ---
 
